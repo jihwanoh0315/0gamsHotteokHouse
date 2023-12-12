@@ -1,0 +1,30 @@
+{
+    "currDate": 0,
+    "currMission": 0,
+    "currBuilding": 0,
+    "currMoney": 0,
+    "items": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "levels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "openedBuilding": 0,
+    "highestSale": 0,
+    "clear": false
+}

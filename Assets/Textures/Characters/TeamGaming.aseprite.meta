@@ -1,0 +1,1348 @@
+fileFormatVersion: 2
+guid: 74ce0828ff7b3df419614be95cc9c7c3
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 32
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 0
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 0
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638305613121782603
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: TeamGaming_Frame_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.48076925}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 211
+      y: 1714
+      width: 199
+      height: 104
+    spriteID: aac02c90b8e313c42b26a42a5df7d902
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 211, y: 1714}
+  - name: TeamGaming_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.48076925}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 211
+      y: 1826
+      width: 199
+      height: 104
+    spriteID: be2edc9d8bde0714f8bd3246411fd28f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 211, y: 1826}
+  - name: TeamGaming_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.48076925}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 211
+      y: 1938
+      width: 199
+      height: 104
+    spriteID: 66acc4276a81ac94b90bca114a719978
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 211, y: 1938}
+  - name: TeamGaming_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.48076925}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 418
+      y: 4
+      width: 199
+      height: 104
+    spriteID: 7f6949fff29e83a459ebfdd053163b76
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 418, y: 4}
+  - name: TeamGaming_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.48076925}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 418
+      y: 116
+      width: 199
+      height: 104
+    spriteID: e544c389c0ff6f94b945e1c9ec059ea4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 418, y: 116}
+  - name: TeamGaming_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.48076925}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 418
+      y: 228
+      width: 199
+      height: 104
+    spriteID: cf515e46287a31e40876c167890e9dd3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 418, y: 228}
+  - name: TeamGaming_Frame_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.48076925}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 418
+      y: 340
+      width: 199
+      height: 104
+    spriteID: 5ab94a25de243614a9e2ffd372a8e351
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 418, y: 340}
+  - name: TeamGaming_Frame_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.48076925}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 418
+      y: 452
+      width: 199
+      height: 104
+    spriteID: 4a0ffb0c3addb1f46a07500cd62999b2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 418, y: 452}
+  - name: TeamGaming_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.48076925}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 418
+      y: 564
+      width: 199
+      height: 104
+    spriteID: 6312fee799ddeb14993efba290f558c9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 418, y: 564}
+  - name: TeamGaming_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.48076925}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 418
+      y: 676
+      width: 199
+      height: 104
+    spriteID: 3c0423248345b9d4fb5d0fae421c31c2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 418, y: 676}
+  - name: TeamGaming_Frame_10
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 199
+      height: 106
+    spriteID: ee5d06d6dbba8c14a95b3202fcb808e3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: TeamGaming_Frame_11
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 118
+      width: 199
+      height: 106
+    spriteID: 3ccf7923c1aafde4492077f52ab9b0e9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 118}
+  - name: TeamGaming_Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 232
+      width: 199
+      height: 106
+    spriteID: 85165fad6e8cf974ea2192ac9b69141d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 232}
+  - name: TeamGaming_Frame_13
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 346
+      width: 199
+      height: 106
+    spriteID: 0ee49bf3a7024874e88cfd7268c07b0d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 346}
+  - name: TeamGaming_Frame_14
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 460
+      width: 199
+      height: 106
+    spriteID: a5e15590f3d07094bae42778e3938524
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 460}
+  - name: TeamGaming_Frame_15
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 574
+      width: 199
+      height: 106
+    spriteID: 3c73728699ed3b244ae188b265b2f3a7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 574}
+  - name: TeamGaming_Frame_16
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 688
+      width: 199
+      height: 106
+    spriteID: dec345dda2e16034f8d27e6d8724ad05
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 688}
+  - name: TeamGaming_Frame_17
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 802
+      width: 199
+      height: 106
+    spriteID: d4a807dc69c38c7438f79e2e9402a911
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 802}
+  - name: TeamGaming_Frame_18
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 916
+      width: 199
+      height: 106
+    spriteID: 33bb308b279efe649b8bdc5116d4a2af
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 916}
+  - name: TeamGaming_Frame_19
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1030
+      width: 199
+      height: 106
+    spriteID: 59809656787073e439ad717b652b9dc7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1030}
+  - name: TeamGaming_Frame_20
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1144
+      width: 199
+      height: 106
+    spriteID: cbda4ca9cb7c03a4ba4b337f92d63ecb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1144}
+  - name: TeamGaming_Frame_21
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1258
+      width: 199
+      height: 106
+    spriteID: b60ceb0696b44ad4ca680cf0ac95399b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1258}
+  - name: TeamGaming_Frame_22
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1372
+      width: 199
+      height: 106
+    spriteID: 6fd48034548c0924fb5c92d9757d7888
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1372}
+  - name: TeamGaming_Frame_23
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1486
+      width: 199
+      height: 106
+    spriteID: 42f5713cb829cf34f89baeb61e981a1d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1486}
+  - name: TeamGaming_Frame_24
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1600
+      width: 199
+      height: 106
+    spriteID: 3912c9a00c3d78541832d17d3cbcc536
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1600}
+  - name: TeamGaming_Frame_25
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1714
+      width: 199
+      height: 106
+    spriteID: 65dab4d2f7ffdd34f84d0cc7fd3f161e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1714}
+  - name: TeamGaming_Frame_26
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1828
+      width: 199
+      height: 106
+    spriteID: cc88113938c756141b2334766e7bce5e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1828}
+  - name: TeamGaming_Frame_27
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 211
+      y: 4
+      width: 199
+      height: 106
+    spriteID: 44f8acf17dd20c24a9090d5fd16b21b6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 211, y: 4}
+  - name: TeamGaming_Frame_28
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 211
+      y: 118
+      width: 199
+      height: 106
+    spriteID: 792a23d2c928b184dbd61bccd91dff33
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 211, y: 118}
+  - name: TeamGaming_Frame_29
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 211
+      y: 232
+      width: 199
+      height: 106
+    spriteID: 00d834b2d86c243448043372e0204e0d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 211, y: 232}
+  - name: TeamGaming_Frame_30
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 211
+      y: 346
+      width: 199
+      height: 106
+    spriteID: 5ed2a76a9e6b7954ea79f25487026bdb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 211, y: 346}
+  - name: TeamGaming_Frame_31
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 211
+      y: 460
+      width: 199
+      height: 106
+    spriteID: 803829f80b3c82d47a9e0c385d3116cc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 211, y: 460}
+  - name: TeamGaming_Frame_32
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 211
+      y: 574
+      width: 199
+      height: 106
+    spriteID: 23a0c51dfe879ff4f93d2c2ec1e23253
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 211, y: 574}
+  - name: TeamGaming_Frame_33
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 211
+      y: 688
+      width: 199
+      height: 106
+    spriteID: 484d09a7c5b1182429e7bbb23b44e379
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 211, y: 688}
+  - name: TeamGaming_Frame_34
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 211
+      y: 802
+      width: 199
+      height: 106
+    spriteID: 48069e8dea54d88459740017facdd11e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 211, y: 802}
+  - name: TeamGaming_Frame_35
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 211
+      y: 916
+      width: 199
+      height: 106
+    spriteID: 087f138fac8eb7646b43134caedd445f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 211, y: 916}
+  - name: TeamGaming_Frame_36
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 211
+      y: 1030
+      width: 199
+      height: 106
+    spriteID: 619ba2d8d40eb834390586920f4687ed
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 211, y: 1030}
+  - name: TeamGaming_Frame_37
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 211
+      y: 1144
+      width: 199
+      height: 106
+    spriteID: 6ce27ed49517f9346996dcd39e186945
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 211, y: 1144}
+  - name: TeamGaming_Frame_38
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 211
+      y: 1258
+      width: 199
+      height: 106
+    spriteID: 4b35f3e3d639efe49a6111059f7b5766
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 211, y: 1258}
+  - name: TeamGaming_Frame_39
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 211
+      y: 1372
+      width: 199
+      height: 106
+    spriteID: 37ae2db47c8c7564a95578b5cd50c26d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 211, y: 1372}
+  - name: TeamGaming_Frame_40
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 211
+      y: 1486
+      width: 199
+      height: 106
+    spriteID: ca8d3d151e6052c4ca5e60303ef66a6b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 211, y: 1486}
+  - name: TeamGaming_Frame_41
+    originalName: 
+    pivot: {x: 0.5, y: 0.47169814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 211
+      y: 1600
+      width: 199
+      height: 106
+    spriteID: 53215d9bf00e0734fa5671ba982546c7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 211, y: 1600}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 570751238
+    name: TeamGaming
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: TeamGaming_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 104
+      spriteId: aac02c90b8e313c42b26a42a5df7d902
+    - name: TeamGaming_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 104
+      spriteId: be2edc9d8bde0714f8bd3246411fd28f
+    - name: TeamGaming_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 104
+      spriteId: 66acc4276a81ac94b90bca114a719978
+    - name: TeamGaming_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 104
+      spriteId: 7f6949fff29e83a459ebfdd053163b76
+    - name: TeamGaming_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 104
+      spriteId: e544c389c0ff6f94b945e1c9ec059ea4
+    - name: TeamGaming_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 104
+      spriteId: cf515e46287a31e40876c167890e9dd3
+    - name: TeamGaming_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 104
+      spriteId: 5ab94a25de243614a9e2ffd372a8e351
+    - name: TeamGaming_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 104
+      spriteId: 4a0ffb0c3addb1f46a07500cd62999b2
+    - name: TeamGaming_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 104
+      spriteId: 6312fee799ddeb14993efba290f558c9
+    - name: TeamGaming_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 104
+      spriteId: 3c0423248345b9d4fb5d0fae421c31c2
+    - name: TeamGaming_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: ee5d06d6dbba8c14a95b3202fcb808e3
+    - name: TeamGaming_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: 3ccf7923c1aafde4492077f52ab9b0e9
+    - name: TeamGaming_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: 85165fad6e8cf974ea2192ac9b69141d
+    - name: TeamGaming_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: 0ee49bf3a7024874e88cfd7268c07b0d
+    - name: TeamGaming_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: a5e15590f3d07094bae42778e3938524
+    - name: TeamGaming_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: 3c73728699ed3b244ae188b265b2f3a7
+    - name: TeamGaming_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: dec345dda2e16034f8d27e6d8724ad05
+    - name: TeamGaming_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: d4a807dc69c38c7438f79e2e9402a911
+    - name: TeamGaming_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: 33bb308b279efe649b8bdc5116d4a2af
+    - name: TeamGaming_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: 59809656787073e439ad717b652b9dc7
+    - name: TeamGaming_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: cbda4ca9cb7c03a4ba4b337f92d63ecb
+    - name: TeamGaming_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: b60ceb0696b44ad4ca680cf0ac95399b
+    - name: TeamGaming_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: 6fd48034548c0924fb5c92d9757d7888
+    - name: TeamGaming_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: 42f5713cb829cf34f89baeb61e981a1d
+    - name: TeamGaming_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: 3912c9a00c3d78541832d17d3cbcc536
+    - name: TeamGaming_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: 65dab4d2f7ffdd34f84d0cc7fd3f161e
+    - name: TeamGaming_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: cc88113938c756141b2334766e7bce5e
+    - name: TeamGaming_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: 44f8acf17dd20c24a9090d5fd16b21b6
+    - name: TeamGaming_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: 792a23d2c928b184dbd61bccd91dff33
+    - name: TeamGaming_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: 00d834b2d86c243448043372e0204e0d
+    - name: TeamGaming_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: 5ed2a76a9e6b7954ea79f25487026bdb
+    - name: TeamGaming_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: 803829f80b3c82d47a9e0c385d3116cc
+    - name: TeamGaming_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: 23a0c51dfe879ff4f93d2c2ec1e23253
+    - name: TeamGaming_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: 484d09a7c5b1182429e7bbb23b44e379
+    - name: TeamGaming_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: 48069e8dea54d88459740017facdd11e
+    - name: TeamGaming_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: 087f138fac8eb7646b43134caedd445f
+    - name: TeamGaming_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: 619ba2d8d40eb834390586920f4687ed
+    - name: TeamGaming_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: 6ce27ed49517f9346996dcd39e186945
+    - name: TeamGaming_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: 4b35f3e3d639efe49a6111059f7b5766
+    - name: TeamGaming_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: 37ae2db47c8c7564a95578b5cd50c26d
+    - name: TeamGaming_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: ca8d3d151e6052c4ca5e60303ef66a6b
+    - name: TeamGaming_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 0
+        y: 20
+        width: 199
+        height: 106
+      spriteId: 53215d9bf00e0734fa5671ba982546c7
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 199, y: 140}

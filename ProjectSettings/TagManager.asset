@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - myCol
+  - 
+  - 
+  - 
+  - Structure
+  - Dough
+  - DoughUp
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2430511583
+    locked: 0
+  - name: Structure
+    uniqueID: 1683733885
+    locked: 0
+  - name: Character
+    uniqueID: 279644439
+    locked: 0
+  - name: Emoji
+    uniqueID: 1419470741
+    locked: 0
+  - name: WorkingPlace
+    uniqueID: 2052613887
+    locked: 0
+  - name: OnTheHand
+    uniqueID: 2266447041
+    locked: 0
