@@ -18263,6 +18263,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_gameData:
+    activeFoods: 0000000000
+    doughScore:
+    - 0
+    - 0
+    - 0
     currDate: 0
     currMission: 0
     isWorking: 0
@@ -18273,6 +18278,7 @@ MonoBehaviour:
     openedBuilding: 0
     highestSale: 0
     clear: 0
+  eventHappened: 0
 --- !u!4 &1918772980
 Transform:
   m_ObjectHideFlags: 0
@@ -20678,7 +20684,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2134297695
 RectTransform:
   m_ObjectHideFlags: 0

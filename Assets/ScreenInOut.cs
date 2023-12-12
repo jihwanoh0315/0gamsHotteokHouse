@@ -183,8 +183,8 @@ public class ScreenInOut : MonoBehaviour
     public Sequence VertCutIn(float time_ = 1.0f)
     {
         Sequence mySequence = DOTween.Sequence();
-        //VertLeft.gameObject.transform.localPosition = new Vector3(0.0f, 0.0f, 30.0f);
-        //VertRight.gameObject.transform.localPosition = new Vector3(0.0f, 0.0f, 30.0f);
+        VertLeft.gameObject.transform.localPosition = new Vector3(0.0f, 0.0f, 30.0f);
+        VertRight.gameObject.transform.localPosition = new Vector3(0.0f, 0.0f, 30.0f);
 
         mySequence.Insert(0.0f, VertLeft.GetComponent<RectTransform>().DOLocalMove(new Vector3(-1100.0f, 0.0f, 30.0f), time_));
         mySequence.Insert(0.0f, VertRight.GetComponent<RectTransform>().DOLocalMove(new Vector3(1100.0f, 0.0f, 30.0f), time_));

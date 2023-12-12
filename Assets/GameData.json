@@ -1,6 +1,19 @@
 {
+    "activeFoods": [
+        false,
+        false,
+        false,
+        false,
+        false
+    ],
+    "doughScore": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "currDate": 0,
     "currMission": 0,
+    "isWorking": false,
     "currBuilding": 0,
     "currMoney": 0,
     "items": [

@@ -47,7 +47,28 @@ public class LevelSetting : MonoBehaviour
 [System.Serializable]
 public class GameData
 {
+    /*****************************************
+     * name: activeFoods
+     * role: 현재 파는물건
+     *          호떡
+     *          0. 녹차호떡
+     *          1. 고구마호떡
+     *          사이드
+     *          2. 식혜
+     *          3. 슬러시
+     *          4. 어묵
+     * ****************************************/
+    public bool[] activeFoods;
 
+    /*****************************************
+ * name: activeFoods
+ * role: 반죽점수
+ *          호떡
+ *          0. 일반
+ *          1.녹차호떡
+ *          2. 고구마호떡
+ * ****************************************/
+    public float[] doughScore;
     /*****************************************
      * name: currDate
      * role: 
@@ -98,8 +119,8 @@ public class GameData
      *          0. 보유 녹차가루
      *          1. 보유 고구마가루
      *          토핑
-     *          2. 보유 씨앗설탕
-     *          3. 보유 치즈갯수
+     *          2. 보유 치즈갯수
+     *          3. 보유 고구마갯수
      *          사이드
      *          식혜)
      *          4.보유 식혜병

@@ -51,6 +51,15 @@ MonoBehaviour:
   - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-dialogue.dialogues__unity-list-dialogue.dialogues.Array.data[6].contexts__UnityEngine.UIElements.ListView
   - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-toHide__UnityEngine.UIElements.ListView
   - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-springJoint2Ds__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-m_gameData.activeItems__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-m_gameData.activeFoods__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-m_gameData.doughScore__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-doughInfo__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-smallDoughs__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-smallGreenTeaDoughs__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-smallSweetPotatoDoughs__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-rankImages__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-secondContainer__UnityEngine.UIElements.ListView
   m_Values:
   - '{}'
   - '{}'
@@ -89,4 +98,13 @@ MonoBehaviour:
   - '{}'
   - '{}'
   - '{}'
-  - '{"m_ShowAlternatingRowBackgrounds":0,"serializedVirtualizationData":{"scrollOffset":{"x":0.0,"y":0.0},"firstVisibleIndex":0,"contentPadding":0.0,"contentHeight":384.0,"anchoredItemIndex":0,"anchorOffset":0.0}}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{"m_ShowAlternatingRowBackgrounds":0,"serializedVirtualizationData":{"scrollOffset":{"x":0.0,"y":0.0},"firstVisibleIndex":0,"contentPadding":0.0,"contentHeight":198.0,"anchoredItemIndex":0,"anchorOffset":0.0}}'
+  - '{"m_ShowAlternatingRowBackgrounds":0,"serializedVirtualizationData":{"scrollOffset":{"x":0.0,"y":0.0},"firstVisibleIndex":0,"contentPadding":0.0,"contentHeight":0.0,"anchoredItemIndex":0,"anchorOffset":0.0}}'
+  - '{"m_ShowAlternatingRowBackgrounds":0,"serializedVirtualizationData":{"scrollOffset":{"x":0.0,"y":0.0},"firstVisibleIndex":0,"contentPadding":0.0,"contentHeight":0.0,"anchoredItemIndex":0,"anchorOffset":0.0}}'
+  - '{"m_ShowAlternatingRowBackgrounds":0,"serializedVirtualizationData":{"scrollOffset":{"x":0.0,"y":0.0},"firstVisibleIndex":0,"contentPadding":0.0,"contentHeight":0.0,"anchoredItemIndex":0,"anchorOffset":0.0}}'
+  - '{"m_ShowAlternatingRowBackgrounds":0,"serializedVirtualizationData":{"scrollOffset":{"x":0.0,"y":0.0},"firstVisibleIndex":0,"contentPadding":0.0,"contentHeight":96.0,"anchoredItemIndex":0,"anchorOffset":0.0}}'
+  - '{"m_ShowAlternatingRowBackgrounds":0,"serializedVirtualizationData":{"scrollOffset":{"x":0.0,"y":0.0},"firstVisibleIndex":0,"contentPadding":0.0,"contentHeight":48.0,"anchoredItemIndex":0,"anchorOffset":0.0}}'

@@ -434,6 +434,7 @@
 "Assets/Scripts/NPC/NPCController.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/WorkingPlace/HotteokOnTray.cs"
+"Assets/SecondDoughSetter.cs"
 "Assets/SliderUpdateTxt.cs"
 "Assets/SmallDoughController.cs"
 "Assets/TrayDemo.cs"

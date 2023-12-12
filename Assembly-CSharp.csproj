@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BehaviorTree\Leaf\L_MoveCharacter.cs" />
+    <Compile Include="Assets\SecondDoughSetter.cs" />
     <Compile Include="Assets\Scripts\Manager\OrderManager.cs" />
     <Compile Include="Assets\TrayDemo.cs" />
     <Compile Include="Assets\MoveObject.cs" />

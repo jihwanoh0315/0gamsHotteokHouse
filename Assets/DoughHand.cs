@@ -6,6 +6,8 @@ public class DoughHand : MonoBehaviour
 {
     public int CollideCount = 0;
     CircleCollider2D circleCollider;
+    [SerializeField] GameObject doughBackground;
+    int maxDoughCutline = 1500;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,17 +29,13 @@ public class DoughHand : MonoBehaviour
         }
         else if (collision.gameObject.layer == 12)
         {
+            ++CollideCount;
+            circleCollider.radius -= 0.001f;
+
             Color currCol = collision.gameObject.GetComponentInParent<SpriteRenderer>().color;
             collision.gameObject.GetComponentInParent<SpriteRenderer>().color 
                 = new Color(currCol.r, currCol.g, currCol.b, currCol.a - 0.005f);
-
-            //if(currCol.a <= 0.1f)
-            //{
-            //    collision.transform.parent.gameObject.SetActive(false);
-            //}
-
-            ++CollideCount;
-            circleCollider.radius -= 0.001f;
+            currCol = collision.gameObject.GetComponentInParent<SpriteRenderer>().color;
         }
     }
 }
