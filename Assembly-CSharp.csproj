@@ -58,6 +58,7 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.9f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\FirstDoughCutScene.cs" />
     <Compile Include="Assets\Scripts\BehaviorTree\Leaf\L_MoveCharacter.cs" />
     <Compile Include="Assets\SecondDoughSetter.cs" />
     <Compile Include="Assets\Scripts\Manager\OrderManager.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Assets\TutorialUI.cs" />
     <Compile Include="Assets\Scripts\BehaviorTree\Leaf\L_ReadDialogues.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleAudio.cs" />
+    <Compile Include="Assets\GamePlayManager.cs" />
     <Compile Include="Assets\Scripts\Manager\DatabaseManager.cs" />
     <Compile Include="Assets\NPCTester.cs" />
     <Compile Include="Assets\Scripts\FadeTester.cs" />
@@ -74,6 +76,7 @@
     <Compile Include="Assets\Scripts\BehaviorTree\ControlFlow\C_Sequencer.cs" />
     <Compile Include="Assets\DoughFoldDemo.cs" />
     <Compile Include="Assets\Scripts\Manager\EmoteManager.cs" />
+    <Compile Include="Assets\Hotteok.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\Scripts\BehaviorTree\Node.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics.cs" />
@@ -89,6 +92,7 @@
     <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics2D.cs" />
     <Compile Include="Assets\SliderUpdateTxt.cs" />
     <Compile Include="Assets\Scripts\NPC\NPCController.cs" />
+    <Compile Include="Assets\HotteokSpriteManager.cs" />
     <Compile Include="Assets\SmallDoughController.cs" />
     <Compile Include="Assets\Scripts\BGMTester.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUI.cs" />
@@ -104,6 +108,7 @@
     <Compile Include="Assets\Scripts\BehaviorTree\Leaf\L_StartDialogue.cs" />
     <Compile Include="Assets\DoughHand.cs" />
     <Compile Include="Assets\Scripts\Manager\AudioManager.cs" />
+    <Compile Include="Assets\FirstSmallDough.cs" />
     <Compile Include="Assets\ObjectEffect\ObjectPullOut.cs" />
     <Compile Include="Assets\Scripts\Manager\BGMManager.cs" />
     <Compile Include="Assets\Scripts\BehaviorTree\ControlFlow\C_Selector.cs" />
@@ -111,6 +116,7 @@
     <Compile Include="Assets\Scripts\CutScene\Intro2CutScene.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
     <Compile Include="Assets\Scripts\Manager\TestManager.cs" />
+    <Compile Include="Assets\HotteokBoardStatus.cs" />
     <Compile Include="Assets\ChaseMouse.cs" />
     <Compile Include="Assets\Scripts\Manager\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\BehaviorTree\QuestPlayer.cs" />

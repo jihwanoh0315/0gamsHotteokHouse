@@ -43,6 +43,7 @@ public class ScreenInOut : MonoBehaviour
 
     public TweenerCore<Color, Color, ColorOptions> EntireFadeIn(float time_ = 0.5f)
     {
+        EntireFader.DOFade(1, 0.0f);
         return EntireFader.DOFade(0, time_);
     }
     public TweenerCore<Color, Color, ColorOptions> EntireFadeOut(float time_ = 0.5f)

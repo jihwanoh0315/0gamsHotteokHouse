@@ -32,12 +32,13 @@ public class Intro2CutScene : MonoBehaviour
 
     float m_cutTimer = 0.0f;
     float m_timeLimit = 3.0f;
-    float m_walkingTime = 2.0f;
+    float m_walkingTime = 30.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        screenInOut.HorizOpen();
+        screenInOut.EntireFadeIn(1.0f);
+        //screenInOut.HorizOpen();
 
         theDM = FindObjectOfType<DialogueManager>();
 
@@ -103,6 +104,7 @@ public class Intro2CutScene : MonoBehaviour
             switch (m_currCutScene)
             {
                 case 0:
+                    screenInOut.HorizCutIn(1.0f);
                     m_dialogSection = true;
                     theDM.ShowDialogue(eventForTest.GetDialogueWithLines(0, 1, 1));
                     break;

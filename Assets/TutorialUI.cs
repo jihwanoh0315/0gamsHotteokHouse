@@ -73,10 +73,10 @@ public class TutorialUI : MonoBehaviour
             t_pageNum.text = (currImageNum+1).ToString();
         }
         nextButton.SetActive(true);
+        closeButton.gameObject.SetActive(false);
         if (currImageNum <= 0)
         {
             prevButton.gameObject.SetActive(false);
-            closeButton.gameObject.SetActive(false);
         }
     }
 }

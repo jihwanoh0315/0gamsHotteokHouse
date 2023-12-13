@@ -7,7 +7,6 @@ public class DoughHand : MonoBehaviour
     public int CollideCount = 0;
     CircleCollider2D circleCollider;
     [SerializeField] GameObject doughBackground;
-    int maxDoughCutline = 1500;
     // Start is called before the first frame update
     void Start()
     {

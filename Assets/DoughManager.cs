@@ -84,7 +84,8 @@ public class DoughManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isWaiting)
+
+        if (isWaiting)
         {
             currWaitTime += Time.deltaTime;
 
@@ -398,6 +399,7 @@ public class DoughManager : MonoBehaviour
         timeSlider.gameObject.SetActive(true);
         doughText.transform.parent.gameObject.SetActive(true);
         endSign.SetActive(true);
+        Cursor.visible = false;
     }
 
     void EndWork()
@@ -419,6 +421,7 @@ public class DoughManager : MonoBehaviour
 
         handInfo.CollideCount = 0;
         handInfo.gameObject.SetActive(false);
+        Cursor.visible = true;
         endSign.transform.DOLocalMoveX(1200.0f, 0.0f);
 
         mySequence = DOTween.Sequence();
