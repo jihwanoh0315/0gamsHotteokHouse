@@ -176,7 +176,7 @@ TextureImporter:
       name: Hotteok_OnPlate_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 256
         y: 128
         width: 64
         height: 64
@@ -197,7 +197,7 @@ TextureImporter:
       name: Hotteok_OnPlate_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 320
         y: 128
         width: 64
         height: 64
@@ -323,8 +323,8 @@ TextureImporter:
       name: Hotteok_OnPlate_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 320
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -344,7 +344,7 @@ TextureImporter:
       name: Hotteok_OnPlate_11
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 0
         width: 64
         height: 64
@@ -365,7 +365,7 @@ TextureImporter:
       name: Hotteok_OnPlate_12
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 0
         width: 64
         height: 64
@@ -386,7 +386,7 @@ TextureImporter:
       name: Hotteok_OnPlate_13
       rect:
         serializedVersion: 2
-        x: 192
+        x: 128
         y: 0
         width: 64
         height: 64
@@ -424,6 +424,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Hotteok_OnPlate_15
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6c82868b6a8f7448825f051c44dbe5d
+      internalID: -1841066874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -442,6 +463,7 @@ TextureImporter:
       Hotteok_OnPlate_12: 1450456550
       Hotteok_OnPlate_13: 1739298764
       Hotteok_OnPlate_14: 123241238
+      Hotteok_OnPlate_15: -1841066874
       Hotteok_OnPlate_2: 406672629
       Hotteok_OnPlate_3: 1385358925
       Hotteok_OnPlate_4: 282389924

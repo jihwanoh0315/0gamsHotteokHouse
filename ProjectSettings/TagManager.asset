@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ForHand
+  - Hotteok
+  - Rack
   layers:
   - Default
   - TransparentFX
@@ -18,13 +21,13 @@ TagManager:
   - Structure
   - Dough
   - DoughUp
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - InteractiveWorkingSpace
+  - WorkingSpace
+  - Hotteok
+  - Wall
+  - Rack
+  - IngameUI
+  - Containers
   - 
   - 
   - 
@@ -53,8 +56,32 @@ TagManager:
   - name: Emoji
     uniqueID: 1419470741
     locked: 0
+  - name: Table
+    uniqueID: 1443630023
+    locked: 0
   - name: WorkingPlace
     uniqueID: 2052613887
+    locked: 0
+  - name: IngameUI
+    uniqueID: 3437672179
+    locked: 0
+  - name: HotteokBoard
+    uniqueID: 415203529
+    locked: 0
+  - name: HotteokBoardUI
+    uniqueID: 3844265927
+    locked: 0
+  - name: OnTheRack
+    uniqueID: 719207749
+    locked: 0
+  - name: IngameUI2
+    uniqueID: 505608335
+    locked: 0
+  - name: Container
+    uniqueID: 3671890151
+    locked: 0
+  - name: OnTheContainer
+    uniqueID: 87668103
     locked: 0
   - name: OnTheHand
     uniqueID: 2266447041

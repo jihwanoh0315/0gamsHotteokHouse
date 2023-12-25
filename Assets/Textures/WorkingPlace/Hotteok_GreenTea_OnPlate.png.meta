@@ -176,7 +176,7 @@ TextureImporter:
       name: Hotteok_GreenTea_OnPlate_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 256
         y: 128
         width: 64
         height: 64
@@ -197,7 +197,7 @@ TextureImporter:
       name: Hotteok_GreenTea_OnPlate_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 320
         y: 128
         width: 64
         height: 64
@@ -323,8 +323,8 @@ TextureImporter:
       name: Hotteok_GreenTea_OnPlate_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 320
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -344,7 +344,7 @@ TextureImporter:
       name: Hotteok_GreenTea_OnPlate_11
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 0
         width: 64
         height: 64
@@ -365,7 +365,7 @@ TextureImporter:
       name: Hotteok_GreenTea_OnPlate_12
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 0
         width: 64
         height: 64
@@ -386,7 +386,7 @@ TextureImporter:
       name: Hotteok_GreenTea_OnPlate_13
       rect:
         serializedVersion: 2
-        x: 192
+        x: 128
         y: 0
         width: 64
         height: 64
@@ -424,6 +424,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Hotteok_GreenTea_OnPlate_15
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661c282d3d1e439449bec522138ab4aa
+      internalID: -1249672488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -442,6 +463,7 @@ TextureImporter:
       Hotteok_GreenTea_OnPlate_12: -172412387
       Hotteok_GreenTea_OnPlate_13: -441079196
       Hotteok_GreenTea_OnPlate_14: 1486738915
+      Hotteok_GreenTea_OnPlate_15: -1249672488
       Hotteok_GreenTea_OnPlate_2: 798098304
       Hotteok_GreenTea_OnPlate_3: -70495640
       Hotteok_GreenTea_OnPlate_4: 917684434

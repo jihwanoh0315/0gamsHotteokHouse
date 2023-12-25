@@ -445,6 +445,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Emote_Emoji_16
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 20
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15cc251551491164fb4c3a984b6ac854
+      internalID: -752394401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Emoji_17
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 20
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352707c79ae36cd48bfc79400b959c01
+      internalID: -1964621674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -464,6 +506,8 @@ TextureImporter:
       Emote_Emoji_13: 158818333
       Emote_Emoji_14: 1097382658
       Emote_Emoji_15: 314905671
+      Emote_Emoji_16: -752394401
+      Emote_Emoji_17: -1964621674
       Emote_Emoji_2: -396401034
       Emote_Emoji_3: -1665848450
       Emote_Emoji_4: 2114937967

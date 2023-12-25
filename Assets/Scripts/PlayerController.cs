@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    LevelSetting m_levelSetting;
+
     public bool m_canMove = true;
     public float m_speed = 3.0f;
     public float m_runSpeed = 1.0f;
@@ -20,15 +22,19 @@ public class PlayerController : MonoBehaviour
     {
         m_movVec = transform.localPosition;
         m_animator = GetComponent<Animator>();
+        m_levelSetting = FindAnyObjectByType<LevelSetting>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!m_canMove)
+        if (!m_levelSetting.canMovePlayer)
+        {
+            m_animator.SetBool("isWalking", false);
             return;
+        }
 
-        if(Input.GetAxisRaw("Horizontal") != 0)
+        if (Input.GetAxisRaw("Horizontal") != 0)
         {
             m_animator.SetBool("isWalking", true);
             if(Input.GetKey(KeyCode.LeftShift))

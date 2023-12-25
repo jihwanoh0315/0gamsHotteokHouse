@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1043120697059885357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4131089822928939084}
+  - component: {fileID: 4004837232713773128}
+  - component: {fileID: 162887181199102539}
+  m_Layer: 0
+  m_Name: LevelSetting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4131089822928939084
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043120697059885357}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.5648056, y: -0.49203274, z: -0.00696704}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4004837232713773128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043120697059885357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37d96eab4267f5f479953515e82ca214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_gameData:
+    currDate: 0
+    currMission: 10
+    isWorking: 0
+    currBuilding: 0
+    currMoney: 0
+    items: 0000000000000000000000000000000000000000000000000000000000000000
+    levels: 000000000000000000000000000000000000000000000000000000000000000000000000
+    pets: 
+    openedBuilding: 0
+    highestSale: 0
+    clear: 0
+    connected: 1
+    idName: dkdkdkdudrn
+  eventHappened: 0
+  activeFoods: 0000000000
+  doughScore:
+  - 0
+  - 0
+  - 0
+  activePet: 0
+  leftPresser: 1
+  canMovePlayer: 1
+  handActive: 1
+--- !u!114 &162887181199102539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043120697059885357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3db8a49682b1e69419094f393c4ae347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EntireFader: {fileID: 0}
+  DiagUp: {fileID: 0}
+  DiagDown: {fileID: 0}
+  VertLeft: {fileID: 0}
+  VertRight: {fileID: 0}
+  HorizUp: {fileID: 0}
+  HorizDown: {fileID: 0}

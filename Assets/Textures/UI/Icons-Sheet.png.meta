@@ -298,6 +298,111 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Icons-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06404773f0a76e04196c0a5431c328d4
+      internalID: -1426095207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d20e6393f19410e428b0b9d0c49b0ea2
+      internalID: -1839016992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ebe0e127d5b1534eae457e3c62cc69d
+      internalID: 216304064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ceef41f8ede2214082fa94c75154d37
+      internalID: -893806022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d443585259500f441963c77e1f9e26e9
+      internalID: -69571640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -311,6 +416,10 @@ TextureImporter:
     nameFileIdTable:
       Icons-Sheet_0: -1273271215
       Icons-Sheet_1: 1447141191
+      Icons-Sheet_10: -1839016992
+      Icons-Sheet_11: 216304064
+      Icons-Sheet_12: -893806022
+      Icons-Sheet_13: -69571640
       Icons-Sheet_2: 143185548
       Icons-Sheet_3: 19517055
       Icons-Sheet_4: 242635006
@@ -318,6 +427,7 @@ TextureImporter:
       Icons-Sheet_6: 452933824
       Icons-Sheet_7: 1354533986
       Icons-Sheet_8: 1963356130
+      Icons-Sheet_9: -1426095207
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

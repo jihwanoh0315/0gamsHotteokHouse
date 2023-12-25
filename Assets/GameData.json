@@ -1,18 +1,6 @@
 {
-    "activeFoods": [
-        false,
-        false,
-        false,
-        false,
-        false
-    ],
-    "doughScore": [
-        0.0,
-        0.0,
-        0.0
-    ],
     "currDate": 0,
-    "currMission": 0,
+    "currMission": 10,
     "isWorking": false,
     "currBuilding": 0,
     "currMoney": 0,
@@ -37,7 +25,10 @@
         0,
         0
     ],
+    "pets": [],
     "openedBuilding": 0,
     "highestSale": 0,
-    "clear": false
+    "clear": false,
+    "connected": true,
+    "idName": "dkdkdkdudrn"
 }

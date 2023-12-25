@@ -12,6 +12,7 @@ public class MeetMangya : CutSceneBase
     [SerializeField] GameObject CutBackground;
     [SerializeField] GameObject CutImage;
     [SerializeField] GameObject CutText;
+    LevelSetting m_levelSetting;
 
 
     // Start is called before the first frame update
@@ -24,6 +25,9 @@ public class MeetMangya : CutSceneBase
         mangyaChar.transform.localPosition = new Vector3(-7.3f, -2.6f, 0.0f);
         mangyaChar.transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
         gamChar.GetComponent<PlayerController>().IsMovable(false);
+        m_levelSetting = FindAnyObjectByType<LevelSetting>();
+
+        m_levelSetting.canMovePlayer = false;
     }
 
     void Update()
@@ -132,9 +136,9 @@ public class MeetMangya : CutSceneBase
                     GoNextCut(2.0f);
                     break;
                 case 8:
-                    CutImage.transform.DOLocalMoveX(20.0f, .25f);
-                    CutText.transform.DOLocalMoveX(-16.0f, .25f);
-                    GoNextCut(.25f);
+                    CutImage.transform.DOLocalMoveX(20.0f, 0.1f);
+                    CutText.transform.DOLocalMoveX(-16.0f, .1f);
+                    GoNextCut(.2f);
                     break;
                 case 9:
                     foreach (GameObject go in toHide)

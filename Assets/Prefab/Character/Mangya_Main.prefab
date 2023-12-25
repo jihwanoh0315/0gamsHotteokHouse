@@ -351,11 +351,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1426c1f57570c43ad3684c001c40d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_goEmoji: {fileID: 1428083169109723137}
+  m_goEmote: {fileID: 50812515708047681}
   m_sprEmoji: {fileID: 7214662542141571609}
-  spr_emoteList:
-  - {fileID: -1241657566, guid: d0a53691713fad042aacac52abc8c074, type: 3}
-  - {fileID: -396401034, guid: d0a53691713fad042aacac52abc8c074, type: 3}
-  - {fileID: -1665848450, guid: d0a53691713fad042aacac52abc8c074, type: 3}
-  - {fileID: 2114937967, guid: d0a53691713fad042aacac52abc8c074, type: 3}
-  - {fileID: 2010264071, guid: d0a53691713fad042aacac52abc8c074, type: 3}

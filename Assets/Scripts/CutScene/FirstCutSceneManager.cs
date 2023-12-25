@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class FirstCutSceneManager : CutSceneBase
 {
     [SerializeField] GameObject movArrow;
+    LevelSetting m_levelSetting;
 
     bool needToGo = false;
     float moveMaxTime = 60.0f;
@@ -16,7 +17,10 @@ public class FirstCutSceneManager : CutSceneBase
     {
         screenInOut.DiagonalCutOut();
         theDM = FindObjectOfType<DialogueManager>();
+        m_levelSetting = FindAnyObjectByType<LevelSetting>();
         m_goNextCut = true;
+
+        m_levelSetting.canMovePlayer = false;
     }
 
     // Update is called once per frame
@@ -44,16 +48,16 @@ public class FirstCutSceneManager : CutSceneBase
         }
 
 
-        //if (m_goNextScene)
-        //{
-        //    m_cutTimer += Time.deltaTime;
-        //    if (m_cutTimer > m_timeLimit)
-        //    {
-        //        //SceneManager.LoadScene("FirstLobby");
-        //    }
-        //}
+        if (m_goNextScene)
+        {
+            m_cutTimer += Time.deltaTime;
+            if (m_cutTimer > m_timeLimit)
+            {
+                SceneManager.LoadScene("Mangya_SuperMarket");
+            }
+        }
 
-        if(needToGo)
+        if (needToGo)
         {
             if(moveTimer > moveMaxTime)
             {
@@ -87,5 +91,11 @@ public class FirstCutSceneManager : CutSceneBase
             }
 
         }
+    }
+
+    public void GoNextScene()
+    {
+        screenInOut.HorizClose(2.0f).SetEase(Ease.OutBounce);
+        m_goNextScene = true;
     }
 }

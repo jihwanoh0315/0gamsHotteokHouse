@@ -257,6 +257,94 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16553438}
   m_CullTransparentMesh: 1
+--- !u!1 &79959378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 79959381}
+  - component: {fileID: 79959380}
+  - component: {fileID: 79959379}
+  m_Layer: 0
+  m_Name: LevelSetting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &79959379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79959378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3db8a49682b1e69419094f393c4ae347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EntireFader: {fileID: 0}
+  DiagUp: {fileID: 0}
+  DiagDown: {fileID: 0}
+  VertLeft: {fileID: 0}
+  VertRight: {fileID: 0}
+  HorizUp: {fileID: 0}
+  HorizDown: {fileID: 0}
+--- !u!114 &79959380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79959378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37d96eab4267f5f479953515e82ca214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_gameData:
+    currDate: 0
+    currMission: 10
+    isWorking: 0
+    currBuilding: 0
+    currMoney: 0
+    items: 0000000000000000000000000000000000000000000000000000000000000000
+    levels: 000000000000000000000000000000000000000000000000000000000000000000000000
+    pets: 
+    openedBuilding: 0
+    highestSale: 0
+    clear: 0
+    connected: 1
+    idName: dkdkdkdudrn
+  eventHappened: 0
+  activeFoods: 0000000000
+  doughScore:
+  - 0
+  - 0
+  - 0
+  activePet: 0
+  leftPresser: 1
+  canMovePlayer: 1
+  handActive: 1
+--- !u!4 &79959381
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79959378}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.5648056, y: -0.49203274, z: -0.00696704}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &84415247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,6 +1414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenInOut: {fileID: 1110212297}
   gamChar: {fileID: 1699941249}
+  gamAnimator: {fileID: 0}
   mainCamera: {fileID: 521592839}
   eventForTest: {fileID: 606872648}
   m_playCutScene: 0
@@ -2502,7 +2591,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 919613869}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 606872646}
+        m_TargetAssemblyTypeName: FirstCutSceneManager, Assembly-CSharp
+        m_MethodName: GoNextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &919613869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5422,3 +5523,4 @@ SceneRoots:
   - {fileID: 2064476132}
   - {fileID: 409988777}
   - {fileID: 606872647}
+  - {fileID: 79959381}

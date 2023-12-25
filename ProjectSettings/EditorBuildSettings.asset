@@ -36,6 +36,12 @@ EditorBuildSettings:
     path: Assets/Scenes/CutScene/Intro2CutScene.unity
     guid: a6d393d939f84024f9020e2a5a9bb2b8
   - enabled: 1
+    path: Assets/Scenes/CutScene/Mangya_SuperMarket.unity
+    guid: fc5491dd23724bf4983bf487de21abd2
+  - enabled: 1
     path: Assets/Scenes/CutScene/FirstLobby.unity
     guid: d8bb99bd055998a4482caf28cbe90983
+  - enabled: 1
+    path: Assets/Scenes/GamePlay/GamePlay.unity
+    guid: 3c58478aeb3b446458f150aca5df05fb
   m_configObjects: {}

@@ -377,6 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 161eafd4563b3e04285d2b921564496d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_canMove: 1
   m_speed: 3
   m_runSpeed: 1
   m_moveLimit: {x: -8, y: 8}
@@ -392,14 +393,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1426c1f57570c43ad3684c001c40d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_goEmoji: {fileID: 8188585952545156461}
+  m_goEmote: {fileID: 8188585952545156461}
   m_sprEmoji: {fileID: 6876850847172078645}
-  spr_emoteList:
-  - {fileID: -1241657566, guid: d0a53691713fad042aacac52abc8c074, type: 3}
-  - {fileID: -396401034, guid: d0a53691713fad042aacac52abc8c074, type: 3}
-  - {fileID: -1665848450, guid: d0a53691713fad042aacac52abc8c074, type: 3}
-  - {fileID: 2114937967, guid: d0a53691713fad042aacac52abc8c074, type: 3}
-  - {fileID: 2010264071, guid: d0a53691713fad042aacac52abc8c074, type: 3}
 --- !u!61 &8502462619866637536
 BoxCollider2D:
   m_ObjectHideFlags: 0

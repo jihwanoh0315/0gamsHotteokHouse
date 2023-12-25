@@ -21,9 +21,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] Sprite[] spr_portraitList;
     [SerializeField] Dictionary<int, Sprite> portraitDic;
 
-    public Sprite[] spr_emoteList;
-
     Dialogue[] m_dialogues;
+    LevelSetting m_levelSetting;
 
     public bool isDialogue = false; // 대화중이면 true.
     bool isNext = false; // 특정키 입력 대기.
@@ -38,6 +37,7 @@ public class DialogueManager : MonoBehaviour
     float currTime = 0.0f;
     private void Start()
     {
+        m_levelSetting = FindObjectOfType<LevelSetting>();
         SettingUI(false);
         go_Arrow.transform.DOLocalMoveY(70.0f, 0.5f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.Linear);
         go_Arrow.SetActive(false);
@@ -118,6 +118,7 @@ public class DialogueManager : MonoBehaviour
 
     public void ShowDialogue(Dialogue[] dialogues_)
     {
+        m_levelSetting.canMovePlayer = false;
         isDialogue = true;
         txt_Dialogue.text = "";
         txt_Name.text = "";
@@ -129,6 +130,7 @@ public class DialogueManager : MonoBehaviour
     }
     void EndDialogue()
     {
+        m_levelSetting.canMovePlayer = true;
         isDialogue = false;
         contextCount = 0;
         lineCount = 0;

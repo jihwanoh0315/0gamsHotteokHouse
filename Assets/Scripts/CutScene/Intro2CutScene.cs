@@ -32,7 +32,8 @@ public class Intro2CutScene : MonoBehaviour
 
     float m_cutTimer = 0.0f;
     float m_timeLimit = 3.0f;
-    float m_walkingTime = 30.0f;
+    //float m_walkingTime = 30.0f;
+    float m_walkingTime = 2.0f;
 
     // Start is called before the first frame update
     void Start()
