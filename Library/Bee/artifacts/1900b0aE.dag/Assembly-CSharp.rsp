@@ -387,6 +387,7 @@
 "Assets/DOTween/Modules/DOTweenModuleUI.cs"
 "Assets/DOTween/Modules/DOTweenModuleUnityVersion.cs"
 "Assets/DOTween/Modules/DOTweenModuleUtils.cs"
+"Assets/HasMultipleImages.cs"
 "Assets/ObjectEffect/ObjectDrop.cs"
 "Assets/ObjectEffect/ObjectPullOut.cs"
 "Assets/Scripts/BehaviorTree/BHTree.cs"

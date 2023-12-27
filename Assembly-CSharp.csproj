@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\HasMultipleSprites.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
     <Compile Include="Assets\ObjectEffect\ObjectDrop.cs" />
+    <Compile Include="Assets\HasMultipleImages.cs" />
     <Compile Include="Assets\Scripts\GamePlay\Hotteok\HotteokTray.cs" />
     <Compile Include="Assets\Scripts\BehaviorTree\ControlFlow\C_Sequencer.cs" />
     <Compile Include="Assets\Scripts\Manager\DoughManager.cs" />

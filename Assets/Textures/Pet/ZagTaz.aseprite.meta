@@ -127,7 +127,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
+      y: 37
       width: 24
       height: 24
     spriteID: 9c4dd720c76981042805acca7f75c3b3
@@ -138,7 +138,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 4, y: 37}
   - name: ZagTaz_Frame_1
     originalName: 
     pivot: {x: 0.47826087, y: 0}
@@ -146,8 +146,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 36
-      y: 36
+      x: 100
+      y: 37
       width: 23
       height: 24
     spriteID: e248f0dfb8e77a64bbaf1df39c5ff996
@@ -158,7 +158,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 36, y: 36}
+    uvTransform: {x: 100, y: 37}
   - name: ZagTaz_Frame_2
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -166,8 +166,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 36
+      x: 36
+      y: 37
       width: 24
       height: 24
     spriteID: f35d12079982d6d4b835cf3a5ce1bec7
@@ -178,7 +178,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 36}
+    uvTransform: {x: 36, y: 37}
   - name: ZagTaz_Frame_3
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -186,8 +186,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 36
-      y: 4
+      x: 68
+      y: 37
       width: 24
       height: 24
     spriteID: 19ce86dfa9a14ce419a7698b28e9e35d
@@ -198,7 +198,67 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 36, y: 4}
+    uvTransform: {x: 68, y: 37}
+  - name: ZagTaz_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 26
+      height: 25
+    spriteID: ad65ff0cbdf91fc47a4f1d0dede14ecf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: ZagTaz_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 38
+      y: 4
+      width: 26
+      height: 25
+    spriteID: a1516f234b269324690f40e7da83ae63
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 38, y: 4}
+  - name: ZagTaz_Frame_6
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 4
+      width: 26
+      height: 25
+    spriteID: 71358a54ab04bd04397c105e232c74c1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -211,7 +271,7 @@ ScriptedImporter:
     - name: ZagTaz_Frame_0
       frameIndex: 0
       cellRect:
-        x: 0
+        x: 1
         y: 0
         width: 24
         height: 24
@@ -219,7 +279,7 @@ ScriptedImporter:
     - name: ZagTaz_Frame_1
       frameIndex: 1
       cellRect:
-        x: 1
+        x: 2
         y: 0
         width: 23
         height: 24
@@ -227,7 +287,7 @@ ScriptedImporter:
     - name: ZagTaz_Frame_2
       frameIndex: 2
       cellRect:
-        x: 0
+        x: 1
         y: 0
         width: 24
         height: 24
@@ -235,11 +295,35 @@ ScriptedImporter:
     - name: ZagTaz_Frame_3
       frameIndex: 3
       cellRect:
-        x: 0
+        x: 1
         y: 0
         width: 24
         height: 24
       spriteId: 19ce86dfa9a14ce419a7698b28e9e35d
+    - name: ZagTaz_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 0
+        y: 0
+        width: 26
+        height: 25
+      spriteId: ad65ff0cbdf91fc47a4f1d0dede14ecf
+    - name: ZagTaz_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 0
+        y: 0
+        width: 26
+        height: 25
+      spriteId: a1516f234b269324690f40e7da83ae63
+    - name: ZagTaz_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 0
+        y: 0
+        width: 26
+        height: 25
+      spriteId: 71358a54ab04bd04397c105e232c74c1
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -281,4 +365,4 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 24, y: 24}
+  canvasSize: {x: 26, y: 25}

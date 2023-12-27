@@ -336,7 +336,12 @@ public class CustomerAI : MonoBehaviour
     public bool IsNotBusy()
     {
         return !m_isWaiting && !m_isMoving;
-    }               
+    }
+
+    public bool IsMoving()
+    {
+        return m_isMoving;
+    }
     
     public bool IsCanOrder()
     {

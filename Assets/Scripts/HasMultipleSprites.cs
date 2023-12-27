@@ -25,6 +25,7 @@ public class HasMultipleSprites : MonoBehaviour
         if(sprites.Count > index_)
         {
             GetComponent<SpriteRenderer>().sprite = sprites[index_];
+            SetCurrSprite(index_);
         }
     }
 
@@ -40,8 +41,8 @@ public class HasMultipleSprites : MonoBehaviour
     {
         if (sprites.Count > currSprite + 1)
         {
-            GetComponent<SpriteRenderer>().sprite = sprites[currSprite];
             currSprite++;
+            GetComponent<SpriteRenderer>().sprite = sprites[currSprite];
         }
     }
 }

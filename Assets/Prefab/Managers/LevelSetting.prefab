@@ -46,27 +46,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_gameData:
-    currDate: 0
+    currDate: 5
     currMission: 10
     isWorking: 0
     currBuilding: 0
     currMoney: 0
-    items: 0000000000000000000000000000000000000000000000000000000000000000
+    items: 000000000000000000000000000000000000000000000000000000000000000000000000
     levels: 000000000000000000000000000000000000000000000000000000000000000000000000
-    pets: 
+    pets: 0000000000000000
     openedBuilding: 0
     highestSale: 0
+    currAstro: 0
     clear: 0
     connected: 1
     idName: dkdkdkdudrn
+    activeDecos: 000000000000000000000000000000000000000000000000
+    tree: 
+    streetLamp: 
+    wall: 
+    tent: 
+    buildingDeco: 
+    sign: 
+    activeSkin: 0
+    skins: 
   eventHappened: 0
-  activeFoods: 0000000000
+  activeFoods: 0100000101
   doughScore:
-  - 0
-  - 0
-  - 0
+  - 1
+  - 1
+  - 1
   activePet: 0
-  leftPresser: 1
+  activeOil: 0
+  leftPresser: 5
   canMovePlayer: 1
   handActive: 1
 --- !u!114 &162887181199102539

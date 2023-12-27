@@ -66,6 +66,7 @@ public class GamePlayManager : MonoBehaviour
 
     // dough folding game
     [SerializeField] GameObject doughFoldUI;
+    [SerializeField] GameObject feverDoughFoldUI;
     [SerializeField] List<GameObject> doughArrows;
     [SerializeField] List<Sprite> doughArrowsSprite;
     List<KeyCode> doughKeys = new List<KeyCode>(4);
@@ -77,7 +78,7 @@ public class GamePlayManager : MonoBehaviour
 
     // dough placing
     [SerializeField] GameObject doughToPlace;
-    [SerializeField] HotteokBoardStatus hotteokPlate;
+    [SerializeField] HotteokBoardStatus m_hotteokPlate;
     int hotteokLayerMask;
     int workingSpaceLayerMask;
     int interactiveSpaceLayerMask;
@@ -116,7 +117,7 @@ public class GamePlayManager : MonoBehaviour
 
     // Tongs Section
     [Header("Tongs Section")]
-    [SerializeField] GameObject HotteokRack;
+    [SerializeField] BoxCollider2D m_hotteokRackCollider;
     [SerializeField] GameObject pref_hotteokOnRack;
     Dictionary<Dough, List<HotteokOnRack>> hotteokRack = new();
     [SerializeField] List<HotteokOnRack> visualRack = new();
@@ -233,8 +234,7 @@ public class GamePlayManager : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Confined;
 
-        hotteokPlate = FindAnyObjectByType<HotteokBoardStatus>();
-
+        m_hotteokPlate = FindAnyObjectByType<HotteokBoardStatus>();
 
         handSprite = hand.GetComponent<SpriteRenderer>();
         ShowHandChangeWithUI();
@@ -301,10 +301,11 @@ public class GamePlayManager : MonoBehaviour
         }
 
         m_customerManager = FindObjectOfType<CustomerManager>();
-
         m_currMoney = 0;
 
         Game_Initialize();
+        GenerateSpawnPositions();
+        FeverInit();
     }
 
     // Update is called once per frame
@@ -313,67 +314,71 @@ public class GamePlayManager : MonoBehaviour
         ////////////
         /// TOOL SECTION
         //Debug.Log(toTween);
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        if (!g_doDailyCalculation)
+        if (!m_isFeverTime)
         {
-            Sequence mySequence = DOTween.Sequence();
-            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            if (!g_doDailyCalculation)
+            {
+                Sequence mySequence = DOTween.Sequence();
 
-            // Change Hand Mode
-            if (Input.GetKeyDown(KeyCode.Alpha1)) // hand
-            {
-                ResetCurrSequence();
-                handMode = HandMode.HAND;
-                ShowHandChangeWithUI();
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha2)) // oil
-            {
-                ResetCurrSequence();
-                handMode = HandMode.OIL;
-                ShowHandChangeWithUI();
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha3)) // presser
-            {
-                ResetCurrSequence();
-                handMode = HandMode.PRESSER;
-                ShowHandChangeWithUI();
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha4)) // tongs
-            {
-                ResetCurrSequence();
-                handMode = HandMode.TONGS;
-                ShowHandChangeWithUI();
-            }
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                ResetCurrSequence();
-                ShowHandChangeWithUI();
-            }
+                // Change Hand Mode
+                if (Input.GetKeyDown(KeyCode.Alpha1)) // hand
+                {
+                    ResetCurrSequence();
+                    handMode = HandMode.HAND;
+                    ShowHandChangeWithUI();
+                }
+                if (Input.GetKeyDown(KeyCode.Alpha2)) // oil
+                {
+                    ResetCurrSequence();
+                    handMode = HandMode.OIL;
+                    ShowHandChangeWithUI();
+                }
+                if (Input.GetKeyDown(KeyCode.Alpha3)) // presser
+                {
+                    ResetCurrSequence();
+                    handMode = HandMode.PRESSER;
+                    ShowHandChangeWithUI();
+                }
+                if (Input.GetKeyDown(KeyCode.Alpha4)) // tongs
+                {
+                    ResetCurrSequence();
+                    handMode = HandMode.TONGS;
+                    ShowHandChangeWithUI();
+                }
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    ResetCurrSequence();
+                    ShowHandChangeWithUI();
+                }
 
 
-            // Play Hand Role
-            switch (handMode)
-            {
-                case HandMode.HAND:
-                    Mode_HandUpdate();
-                    break;
-                case HandMode.OIL:
-                    Mode_OilUpdate();
-                    break;
-                case HandMode.PRESSER:
-                    Mode_PresserUpdate();
-                    break;
-                case HandMode.TONGS:
-                    Mode_TongsUpdate();
-                    break;
-                default:
-                    break;
-            }
+                // Play Hand Role
+                switch (handMode)
+                {
+                    case HandMode.HAND:
+                        Mode_HandUpdate();
+                        break;
+                    case HandMode.OIL:
+                        Mode_OilUpdate();
+                        break;
+                    case HandMode.PRESSER:
+                        Mode_PresserUpdate();
+                        break;
+                    case HandMode.TONGS:
+                        Mode_TongsUpdate();
+                        break;
+                    default:
+                        break;
+                }
 
-            hand.gameObject.SetActive(levelSetting.handActive);
+                hand.gameObject.SetActive(levelSetting.handActive);
+            }
+            Game_Update();
         }
 
-        Game_Update();
+        FeverUpdate();
     }
 
 
@@ -474,23 +479,27 @@ public class GamePlayManager : MonoBehaviour
                         if (canPlace)
                         {
                             handSprite.color = new Color(0.8f, 1.0f, 0.8f, 0.7f);
+                            Hotteok newHotteok;
                             if (Input.GetMouseButtonDown(0))
                             {
                                 switch (currDough)
                                 {
                                     case Dough.BASE:
-                                        Instantiate(hotteok, new Vector3(mousePos.x, mousePos.y, -5.0f), Quaternion.identity);
+                                        newHotteok = Instantiate(hotteok, new Vector3(mousePos.x, mousePos.y, -5.0f), Quaternion.identity);
                                         break;
                                     case Dough.GREENTEA:
-                                        Instantiate(greenteaHotteok, new Vector3(mousePos.x, mousePos.y, -5.0f), Quaternion.identity);
+                                        newHotteok = Instantiate(greenteaHotteok, new Vector3(mousePos.x, mousePos.y, -5.0f), Quaternion.identity);
                                         break;
                                     case Dough.SWEETPOTATO:
-                                        Instantiate(sweetPotatoHotteok, new Vector3(mousePos.x, mousePos.y, -5.0f), Quaternion.identity);
+                                        newHotteok = Instantiate(sweetPotatoHotteok, new Vector3(mousePos.x, mousePos.y, -5.0f), Quaternion.identity);
                                         break;
                                     default:
+                                        newHotteok = Instantiate(hotteok, new Vector3(mousePos.x, mousePos.y, -5.0f), Quaternion.identity);
                                         break;
                                 }
-                                hotteokPlate.PutHotteok();
+                                m_hotteokPlate.PutHotteok();
+                                m_hotteokPlate.hotteoks.Add(newHotteok);
+
 
                                 isPlacing = false;
                                 ResetHand();
@@ -891,7 +900,6 @@ public class GamePlayManager : MonoBehaviour
         }
 
     }
-
     void SetHoldingObject()
     {
         currStep = otForHand.currStep;
@@ -1001,9 +1009,13 @@ public class GamePlayManager : MonoBehaviour
         myColSequence.Insert(0.0f, gO_.transform.DOShakePosition(.1f, 0.2f, 5));
         myColSequence.Insert(0.05f, gO_.GetComponent<SpriteRenderer>().DOColor(Color.white, 0.01f));
     }
+    void ShakeObject(GameObject gO_, float strenght_ = 0.2f)
+    {
+        Sequence myColSequence = DOTween.Sequence();
+        myColSequence.Insert(0.0f, gO_.transform.DOShakePosition(.1f, strenght_, 5));
+    }
     public void PlayFoldingGame()
     {
-
         if (isResetting)
         {
             m_foldResetTimer += Time.deltaTime;
@@ -1075,6 +1087,7 @@ public class GamePlayManager : MonoBehaviour
     }
     void ResetHand()
     {
+
         currStep = 0;
         currClicked = null;
         handSprite.sprite = handTextures[(int)handMode];
@@ -1085,6 +1098,7 @@ public class GamePlayManager : MonoBehaviour
         dHandOrigScale = dough_Hand.transform.localScale;
         // inactive hand
         dough_Hand.SetActive(false);
+        dough_Hand.transform.position = new Vector3(0, -3.0f, -5.0f);
         // turn off Arrow Game UI
         doughFoldUI.SetActive(false);
         isGaming = false;
@@ -1160,7 +1174,7 @@ public class GamePlayManager : MonoBehaviour
                 {
                     levelSetting.handActive = true;
                     GameObject spO = Instantiate(oilOnPlate, firstPos, oilTrack.transform.rotation);
-                    hotteokPlate.PutOil();
+                    m_hotteokPlate.PutOil();
                     // Reset
                     ResetOil();
                     firstPos = secPos;
@@ -1282,6 +1296,12 @@ public class GamePlayManager : MonoBehaviour
                     }
                 }
             }
+
+            if((mousePos.x > -5.0f && mousePos.x < 5.0f) && mousePos.y > 2.0f)
+            {
+                activeCoolingRackUI = true;
+            }
+
             coolingRackUI.SetActive(activeCoolingRackUI);
 
             CheckingIngameUI();
@@ -1296,8 +1316,8 @@ public class GamePlayManager : MonoBehaviour
                 //Collider2D[] colliders = Physics2D.OverlapCircleAll(mousePos, currHotteok.GetComponent<CircleCollider2D>().radius, rackLayerMask);
                 RaycastHit2D hit = Physics2D.Raycast(mousePos, transform.forward, 15.0f, rackLayerMask);
 
-                if (hit.collider != null && currHotteok.CanRack())
-                {
+                if ((hit.collider != null || ((mousePos.x > -5.0f && mousePos.x < 5.0f) && mousePos.y > 2.0f)) && currHotteok.CanRack())
+                { 
                     AddToRack();
                 }
                 else
@@ -1335,6 +1355,29 @@ public class GamePlayManager : MonoBehaviour
         }
 
         UpdateRackUI((Dough)currHotteok.GetDoughType());
+    }
+
+    void AddToRack(Hotteok ht_)
+    {
+        HotteokOnRack htForRack = Instantiate(pref_hotteokOnRack).GetComponent<HotteokOnRack>();
+        htForRack.name = htForRack.name + addedHotteok++.ToString();
+        htForRack.SetRackHotteok(ht_);
+        htForRack.GetComponent<SpriteRenderer>().sortingOrder = t_currSpawnCount;
+        t_currSpawnCount++;
+        htForRack.m_price = ht_.GetPrice();
+        htForRack.m_stats = ht_.GetStats();
+        ht_.AddToRack(); // reset hotteok
+
+        hotteokRack[(Dough)ht_.GetDoughType()].Add(htForRack.GetComponent<HotteokOnRack>());
+        entireRackList.Add(htForRack);
+        AddToVisualRack(htForRack);
+
+        if (t_MaxVisualRackCount < visualRack.Count)
+        {
+            htForRack.gameObject.SetActive(false);
+        }
+
+        UpdateRackUI((Dough)ht_.GetDoughType());
     }
 
     void UpdateRackUI(Dough dough_)
@@ -1441,6 +1484,8 @@ public class GamePlayManager : MonoBehaviour
     {
         if (m_customerManager.GiveHotteokToCustomer(containers_))
         {
+            m_feverGage += containers_.m_count * 50.0f;
+
             containers_.ResetContainer();
             containers_.gameObject.SetActive(false);
 
@@ -1679,8 +1724,345 @@ public class GamePlayManager : MonoBehaviour
         }
     }
 
+    // FEVER SECTION
+    bool m_isFeverTime = false;
+    public int m_maxCount = 15;
+    float m_feverMaxGage = 100.0f;
+    public float m_maxFeverTime = 15.0f;
+
+    int m_feverCount = 0;
+    float m_feverGage = 0.0f;
+    float m_feverTimer = 0.0f;
+
+    bool m_feverResetting = false;
+
+    private List<Vector2> spawnPositions = new List<Vector2>();
+    private List<Dough> htToSpawn = new List<Dough>();
+
+    [Header("FeverSection")]
+    [SerializeField] Image m_feverGageBar;
+    [SerializeField] Sprite m_blackFever;
+    [SerializeField] Image m_feverChar;
+    [SerializeField] Animator m_feverAnim;
+    [SerializeField] Image m_combo;
+    [SerializeField] Image m_comboNumbers;
+
+    Sequence feverAnimSequence;
+    Sequence stampSequence;
+    Sequence stampNumSequence;
+    void FeverInit()
+    {
+        m_feverCount = 0;
+        m_feverGage = 0.0f;
+        m_feverTimer = 0.0f;
+
+        m_combo.DOFade(0.0f, 0.0f);
+        m_comboNumbers.DOFade(0.0f, 0.0f);
+    }
+
+    public void StartFeverGame()
+    {
+        m_feverGageBar.fillAmount = 1.0f;
+        m_feverCount = 0;
+        // Show Folding Game UI
+        doughFoldUI.SetActive(true);
+        feverDoughFoldUI.SetActive(true);
+        // Set Arrow dir
+        SetFeverFoldingDirection();
+        m_feverResetting = true;
+        m_isFeverTime = true;
+
+        m_feverAnim.enabled = true;
+
+        feverAnimSequence = DOTween.Sequence();
+        feverAnimSequence.Append(m_feverGageBar.DOFade(0.3f, 0.5f).SetEase(Ease.Linear));
+        feverAnimSequence.Append(m_feverGageBar.DOFade(1.0f, 0.5f).SetEase(Ease.Linear));
+        feverAnimSequence.Insert(0.0f, m_feverGageBar.transform.DOShakePosition(0.1f, 10.0f).SetEase(Ease.Linear));
+        feverAnimSequence.SetLoops(-1); // 무한 반복
+        m_comboNumbers.GetComponent<HasMultipleImages>().SetSprite(0);
 
 
+        // 손모양 보여주기
+        dough_Hand.SetActive(true);
+        dough_DoughOnHand.SetActive(true);
 
+        m_hotteokPlate.IsFever(true);
+    }
+    void FeverUpdate()
+    {
+        if(!m_isFeverTime)
+        {
+            m_feverGageBar.fillAmount = m_feverGage / m_feverMaxGage;
+            if (m_feverGage > m_feverMaxGage)
+            {
+                // active fever uis
+                StartFeverGame();
+            }
+        }
+        else
+        {
+            m_feverTimer += Time.deltaTime;
+            m_feverGageBar.fillAmount = (m_maxFeverTime - m_feverTimer) / m_maxFeverTime;
+            if (m_maxFeverTime < m_feverTimer || m_feverCount >= m_maxCount)
+            {
+                SpawnFeverHotteoks();
+                ResetFeverTime();
+                return;
+            }
+            GetFeverDoughInput();
+            PlayingFeverGame();
+
+            TakeShootenHotteok();
+        }
+    }
+
+    void TakeShootenHotteok()
+    {
+        if(m_hotteokPlate.hotteoks.Count > 0)
+        {
+            List<Hotteok> htChecker = new List<Hotteok>(m_hotteokPlate.hotteoks);
+            //hotteokRack
+            foreach (Hotteok ht in htChecker)
+            {
+                CircleCollider2D htCol = ht.GetComponent<CircleCollider2D>();
+                if (Physics2D.IsTouching(htCol, m_hotteokRackCollider))
+                {
+                    AddToRack(ht);
+                }
+            }
+        }
+    }
+
+    void ResetFeverTime()
+    {
+        // inactive fever ui
+        doughFoldUI.SetActive(false);
+        feverDoughFoldUI.SetActive(false);
+
+        // reset fever values
+        m_isFeverTime = false;
+        m_feverTimer = 0.0f;
+        m_feverCount = 0;
+        m_feverGage = 0.0f;
+        htToSpawn.Clear();
+        feverAnimSequence.Kill();
+        m_feverGageBar.DOFade(1.0f, 0.0f);
+        m_feverAnim.enabled = false;
+        m_feverChar.sprite = m_blackFever;
+        ResetHand();
+        m_hotteokPlate.IsFever(false);
+    }
+
+    void GenerateSpawnPositions()
+    {
+        for (int i = 0; i < m_maxCount; i++)
+        {
+            Vector2 randomPosition = GenerateNonOverlappingPosition();
+            spawnPositions.Add(randomPosition);
+        }
+    }
+
+    void SetFeverFoldingDirection()
+    {
+        SetHandDoughWithCurrDough();
+        //Debug.Log("Curr Step = " + currStep);
+        currKeyStep = 0;
+        dough_DoughOnHand.GetComponent<SpriteRenderer>().sprite = doughMap[currDough][currStep];
+        doughFoldUI.transform.DOShakePosition(.1f, 5, 5);
+        m_feverResetting = true;
+    }
+
+    void SetHandDoughWithCurrDough()
+    {
+        switch (currDough)
+        {
+            case Dough.BASE:
+                currStep = 1;
+                break;
+            case Dough.GREENTEA:
+            case Dough.SWEETPOTATO:
+                currStep = 2;
+                break;
+            default:
+                break;
+        }
+    }
+
+    void GetFeverDoughInput()
+    {
+        if ((hand.localPosition.x < -5.0f || hand.localPosition.x > 5.0f) && hand.localPosition.y < 3.5f)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(mousePos, transform.forward, 15.0f, interactiveSpaceLayerMask);
+
+            if (hit.collider != null)
+                if(hit.collider.name == "GreenTeaDoughContainer" ||
+                hit.collider.name == "DoughContainer" ||
+                hit.collider.name == "SweetPotatoDoughContainer")
+            {
+                otForHand = hit.collider.GetComponent<ForHand>();
+                if (prevForHand != otForHand)
+                {
+                    Debug.Log("Onhand " + hit.collider.name);
+
+                    hand.GetComponent<Animator>().runtimeAnimatorController = otForHand.handAnimator.runtimeAnimatorController;
+                    //otForHand.MouseOn(true);
+                    if (prevForHand != null)
+                    {
+                        prevForHand.GetComponent<ForHand>().MouseOn(false);
+                    }
+                    otForHand.GetComponent<ForHand>().MouseOn(true);
+                    prevForHand = otForHand;
+                }
+
+                if (Input.GetMouseButtonDown(0))
+                {
+                    if (otForHand)
+                    {
+                        switch (hit.collider.name)
+                        {
+                            case "DoughContainer":
+                                currDough = Dough.BASE;
+                                currStep = 1;
+                                break;
+                            case "GreenTeaDoughContainer":
+                                currDough = Dough.GREENTEA;
+                                currStep = 2;
+                                break;
+                            case "SweetPotatoDoughContainer":
+                                currDough = Dough.SWEETPOTATO;
+                                currStep = 2;
+                                break;
+                            default:
+                                break;
+                        }
+                    dough_DoughOnHand.GetComponent<SpriteRenderer>().sprite = doughMap[currDough][currStep + currKeyStep];
+                    }
+                }
+            }
+            else
+            {
+                // 감지된 오브젝트가 없거나 태그가 일치하지 않으면 기본 커서 이미지로 변경
+                hand.GetComponent<Animator>().runtimeAnimatorController = null;
+                if (prevForHand)
+                {
+                    prevForHand.GetComponent<ForHand>().MouseOn(false);
+                    prevForHand = null;
+                }
+            }
+        }
+    }
+    void PlayingFeverGame()
+    {
+        ///
+        if (m_feverResetting)
+        {
+            m_foldResetTimer += Time.deltaTime;
+            if (m_foldResetTimer > 0.1f)
+            {
+                // Set Arrow dir
+                int ranVal = Random.Range(0, 3);
+                for (int i = 0; i < 4; ++i)
+                {
+                    doughKeys[i] = myKeys[ranVal];
+                    doughArrows[i].GetComponent<Image>().sprite = doughArrowsSprite[ranVal];
+                    doughArrows[i].GetComponent<Image>().DOFade(1.0f, 0.0f);
+                }
+                m_feverResetting = false;
+            }
+            return;
+        }
+
+
+        if (Input.anyKeyDown && !Input.GetMouseButton(0) && !Input.GetMouseButton(1) && !Input.GetMouseButton(2))
+        {
+            if (Input.GetKey(doughKeys[currKeyStep]) && !m_feverResetting)
+            {
+                doughArrows[currKeyStep].GetComponent<Image>().DOFade(0.0f, 0.1f);
+                ++currKeyStep;
+                dough_DoughOnHand.GetComponent<SpriteRenderer>().sprite = doughMap[currDough][currStep + currKeyStep];
+                ShakeObject(doughFoldUI, 15.0f);
+                ShakeObject(dough_DoughOnHand, 1.0f);
+                ShakeObject(dough_Hand, 1.0f);
+            }
+        }
+
+        if (currKeyStep == 4)
+        {
+            ++m_feverCount;
+            currKeyStep = 0;
+            SetFeverFoldingDirection();
+            m_foldResetTimer = 0.0f;
+            htToSpawn.Add(currDough);
+            m_comboNumbers.GetComponent<HasMultipleImages>().SetNextSprite();
+            Stamp(m_combo.transform);
+            if(m_feverCount > 1)
+            {
+                NumStamp(m_comboNumbers.transform);
+            }
+        }
+    }
+
+    private Vector2 GenerateNonOverlappingPosition()
+    {
+        while (true)
+        {
+            Vector2 randomPosition = new Vector2(Random.Range(-2.0f, 2.0f), Random.Range(0.0f, -4.0f));
+            if (!spawnPositions.Contains(randomPosition))
+            {
+                return randomPosition;
+            }
+        }
+    }
+
+    private void SpawnFeverHotteoks()
+    {
+        for (int i = 0; i < m_feverCount; i++)
+        {
+            Vector2 currPos = spawnPositions[i];
+            Hotteok newHotteok;
+            switch (htToSpawn[i])
+            {
+                case Dough.BASE:
+                    newHotteok = Instantiate(hotteok, new Vector3(currPos.x, currPos.y, -5.0f), Quaternion.identity);
+                    break;
+                case Dough.GREENTEA:
+                    newHotteok = Instantiate(greenteaHotteok, new Vector3(currPos.x, currPos.y, -5.0f), Quaternion.identity);
+                    break;
+                case Dough.SWEETPOTATO:
+                    newHotteok = Instantiate(sweetPotatoHotteok, new Vector3(currPos.x, currPos.y, -5.0f), Quaternion.identity);
+                    break;
+                default:
+                    newHotteok = Instantiate(hotteok, new Vector3(currPos.x, currPos.y, -5.0f), Quaternion.identity);
+                    break;
+            }
+            m_hotteokPlate.hotteoks.Add(newHotteok);
+        }
+    }
+
+    void Stamp(Transform stamp)
+    {
+        Vector3 startScale = Vector3.one;
+        Vector3 endScale = new Vector3(1.1f, 1.1f, 1f);
+
+        stampSequence.Kill();
+        stampSequence = DOTween.Sequence();
+        stampSequence.Append(stamp.GetComponent<Image>().DOFade(1.0f, 0.0f));
+        stampSequence.Append(stamp.DOScale(endScale, 0.5f).SetEase(Ease.OutQuad));
+        stampSequence.Append(stamp.DOScale(startScale, 0.15f).SetEase(Ease.InQuad));
+        stampSequence.Append(stamp.GetComponent<Image>().DOFade(0.0f, 3.0f).SetEase(Ease.Linear));
+    }
+
+    void NumStamp(Transform stamp)
+    {
+        Vector3 startScale = Vector3.one;
+        Vector3 endScale = new Vector3(1.5f, 1.5f, 1f);
+
+        stampNumSequence.Kill();
+        stampNumSequence = DOTween.Sequence();
+        stampNumSequence.Append(stamp.GetComponent<Image>().DOFade(1.0f, 0.0f));
+        stampNumSequence.Append(stamp.DOScale(endScale, 0.5f).SetEase(Ease.OutQuad));
+        stampNumSequence.Append(stamp.DOScale(startScale, 0.15f).SetEase(Ease.InQuad));
+        stampNumSequence.Append(stamp.GetComponent<Image>().DOFade(0.0f, 3.0f).SetEase(Ease.Linear));
+    }
 
 }

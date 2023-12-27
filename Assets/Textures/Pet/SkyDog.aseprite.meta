@@ -126,8 +126,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 4
+      x: 72
+      y: 36
       width: 24
       height: 24
     spriteID: 46b66e63a58f67443a82cb12244d8606
@@ -138,7 +138,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 72, y: 36}
   - name: SkyDog_Frame_1
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -147,7 +147,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 36
+      y: 37
       width: 24
       height: 23
     spriteID: e38022455f43a9748a111c2a9a1c4717
@@ -158,7 +158,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 36}
+    uvTransform: {x: 4, y: 37}
   - name: SkyDog_Frame_2
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -166,8 +166,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 36
-      y: 4
+      x: 38
+      y: 37
       width: 24
       height: 23
     spriteID: 362fd0d56c57fef4aac94df76290d309
@@ -178,7 +178,67 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 36, y: 4}
+    uvTransform: {x: 38, y: 37}
+  - name: SkyDog_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 26
+      height: 25
+    spriteID: c2e316f19ea0ea146929f63534a967ce
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: SkyDog_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 4
+      width: 26
+      height: 24
+    spriteID: a4c109478f43b044389e23e4ea277fe6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 4}
+  - name: SkyDog_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 38
+      y: 4
+      width: 26
+      height: 25
+    spriteID: 3b08dee33ab750d4b810742205ea6723
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 38, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -191,7 +251,7 @@ ScriptedImporter:
     - name: SkyDog_Frame_0
       frameIndex: 0
       cellRect:
-        x: 0
+        x: 1
         y: 0
         width: 24
         height: 24
@@ -199,7 +259,7 @@ ScriptedImporter:
     - name: SkyDog_Frame_1
       frameIndex: 1
       cellRect:
-        x: 0
+        x: 1
         y: 0
         width: 24
         height: 23
@@ -207,11 +267,35 @@ ScriptedImporter:
     - name: SkyDog_Frame_2
       frameIndex: 2
       cellRect:
-        x: 0
+        x: 1
         y: 0
         width: 24
         height: 23
       spriteId: 362fd0d56c57fef4aac94df76290d309
+    - name: SkyDog_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 0
+        y: 0
+        width: 26
+        height: 25
+      spriteId: c2e316f19ea0ea146929f63534a967ce
+    - name: SkyDog_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 0
+        y: 0
+        width: 26
+        height: 24
+      spriteId: a4c109478f43b044389e23e4ea277fe6
+    - name: SkyDog_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 0
+        y: 0
+        width: 26
+        height: 25
+      spriteId: 3b08dee33ab750d4b810742205ea6723
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -253,4 +337,4 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 24, y: 24}
+  canvasSize: {x: 26, y: 25}

@@ -482,6 +482,7 @@ public class Hotteok : MonoBehaviour
         toolEffect.SetActive(false);
         isHeld = false;
         isMoving = false;
+        hotteokBoardStatus.hotteoks.Remove(this);
 
         Destroy(gameObject);
     }
@@ -625,5 +626,28 @@ public class Hotteok : MonoBehaviour
         //  currPrice *= 1.2f;
 
         price =  Mathf.RoundToInt(((float)price * currPrice));
+    }
+
+    public void IsFeverTimeNow()
+    {
+        if (isBurned)
+        {
+            Destroy(this);
+        }
+
+        for(int i = 0; i < 2; ++i)
+        {
+            faces[i].roast = HotteokRoast.WELL;
+            faces[i].roastAmount = 70.0f;
+        }
+
+        if(currBackSide == 0)
+        {
+            spriteRenderer.sprite = thisHotteokSprites[HotteokRoast.WELL][4];
+        }
+        else
+        {
+            spriteRenderer.sprite = thisHotteokSprites[HotteokRoast.WELL][3];
+        }
     }
 }

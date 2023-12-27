@@ -11,7 +11,7 @@ public class CustomerManager : MonoBehaviour
 
     public GameObject[] customerPrefab;
     LevelSetting m_levelSetting;
-    
+
     public CustomerAI m_customer_Ordering;
 
     // Curr Stage Initial values - from lvSetting
@@ -39,26 +39,29 @@ public class CustomerManager : MonoBehaviour
     bool isStoreOpened = true;
 
     int prevCharacter = 0;
+    int vision = 2; // Possible to check hotteok of person on line
 
     // Start is called before the first frame update
     void Awake()
     {
         m_levelSetting = FindAnyObjectByType<LevelSetting>();
         anotherDough = m_levelSetting.activeFoods[1] ? 2 : m_levelSetting.activeFoods[0] ? 1 : 0;
-        if(m_levelSetting.m_gameData.currDate < 3)
+        if (m_levelSetting.m_gameData.currDate < 2)
         {
             customer_maxHotteok = 1;
-            if(m_levelSetting.m_gameData.currDate < 2)
-            {
-                customer_maxVisitor = 2;
-            }
+            customer_maxVisitor = 2;
         }
-        else if (m_levelSetting.m_gameData.currDate < 6)
+        else if (m_levelSetting.m_gameData.currDate < 5)
+        {
+            customer_maxHotteok = 4;
+            customer_maxVisitor = 3;
+        }
+        else if (m_levelSetting.m_gameData.currDate < 7)
         {
             customer_maxHotteok = 4;
             customer_maxVisitor = 4;
         }
-        else if (m_levelSetting.m_gameData.currDate < 6)
+        else
         {
             customer_maxHotteok = 6;
             customer_maxVisitor = 5;
@@ -68,18 +71,39 @@ public class CustomerManager : MonoBehaviour
         customerCanCommingEarly = 1.0f;
 
         if (m_levelSetting.activeFoods[2])
+        {
             activeSides.Add(0);
+            soldSides.Add(0);
+        }
         if (m_levelSetting.activeFoods[3])
+        {
             activeSides.Add(1);
+            soldSides.Add(0);
+        }
         if (m_levelSetting.activeFoods[4])
+        {
             activeSides.Add(2);
+            soldSides.Add(0);
+        }
+
+        if (m_levelSetting.activePet == 7) //inumaki
+        {
+            vision = 6;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        for (int i = 0; i < m_liningCustomers.Count; i++)
+        {
+            if (i < vision && m_liningCustomers[i].IsNotBusy())
+            {
+                m_liningCustomers[i].m_status.EmoteBox.gameObject.SetActive(true);
+            }
+        }
         // 시간되면 손님 소환
-        if(isStoreOpened) // 오픈중이면
+        if (isStoreOpened) // 오픈중이면
         {
             SpawnCustomer();
         }
@@ -97,7 +121,7 @@ public class CustomerManager : MonoBehaviour
         // 주문하는 손님들 확인해서 주문 끝나면 없애기
         foreach (CustomerAI customer in copyList)
         {
-            if(customer.m_shoppingFinishied)
+            if (customer.m_shoppingFinishied)
             {
                 m_shoppingCustomers.Remove(customer);
                 m_customers.Remove(customer);
@@ -120,10 +144,10 @@ public class CustomerManager : MonoBehaviour
                 }
                 else
                 {
-                    do
+                    while (prevCharacter == toSpawn)
                     {
                         toSpawn = Random.Range(0, customer_maxVisitor);
-                    } while (prevCharacter == toSpawn);
+                    }
                     
                     prevCharacter = toSpawn;
                 }
@@ -161,19 +185,65 @@ public class CustomerManager : MonoBehaviour
         return m_customers.Count;
     }
 
+    void SellSide(CustomerAI customerAI_, int side_)
+    {
+        customerAI_.SetSideInTex(side_, activeSides[side_ - 1]);
+        ++soldSides[side_ - 1];
+    }
+
     void SetSideMenu(CustomerAI customerAI_)
     {
         if(activeSides.Count > 0)
         {
-            int ranVal = Random.Range(0, buySideRatio);
-            if(ranVal < buySideRatio)
+            if(activeSides.Count == 1)
             {
-                //buy the side
-                if (activeSides.Count == 2)
+                int ranVal = Random.Range(0, buySideRatio);
+                if (ranVal < buySideRatio)
                 {
-                    int sidePlace = Random.Range(1, 2);
-                    customerAI_.SetSideInTex(sidePlace, activeSides[sidePlace-1]);
-                    soldSides.Add(sidePlace);
+                    SellSide(customerAI_, 1);
+                }
+            }
+            else
+            {
+                int sidePlace = Random.Range(1, 3);
+
+                if(sidePlace == 1) // check 1 first
+                {
+                    int ranVal = Random.Range(0, buySideRatio);
+
+                    if (ranVal < buySideRatio)
+                    {
+                        //buy the side
+                        SellSide(customerAI_, 1);
+                    }
+                    else
+                    {
+                        ranVal = Random.Range(0, buySideRatio);
+                        if (ranVal < buySideRatio)
+                        {
+                            //buy the side
+                            SellSide(customerAI_, 2);
+                        }
+                    }
+                }
+                else // check 2 first
+                {
+                    int ranVal = Random.Range(0, buySideRatio);
+
+                    if (ranVal < buySideRatio)
+                    {
+                        //buy the side
+                        SellSide(customerAI_, 2);
+                    }
+                    else
+                    {
+                        ranVal = Random.Range(0, buySideRatio);
+                        if (ranVal < buySideRatio)
+                        {
+                            //buy the side
+                            SellSide(customerAI_, 1);
+                        }
+                    }
                 }
             }
         }
@@ -193,6 +263,13 @@ public class CustomerManager : MonoBehaviour
             for (int i = 0; i < lineLength; ++i)
             {
                 m_liningCustomers[i].GoTo(-0.2f - 2.0f * i);
+                if (i < vision)
+                {
+                    if (!m_liningCustomers[i].IsMoving())
+                    {
+                        m_liningCustomers[i].m_status.EmoteBox.gameObject.SetActive(true);
+                    }
+                }
             }
         }
     }
